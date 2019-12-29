@@ -12,12 +12,12 @@ var core = require('@material-ui/core');
 var Fab = _interopDefault(require('@material-ui/core/Fab'));
 var Grid = _interopDefault(require('@material-ui/core/Grid'));
 var styles = require('@material-ui/core/styles');
-var Button = _interopDefault(require('@material-ui/core/Button'));
 var green = _interopDefault(require('@material-ui/core/colors/green'));
 var amber = _interopDefault(require('@material-ui/core/colors/amber'));
 var IconButton = _interopDefault(require('@material-ui/core/IconButton'));
-var Snackbar = _interopDefault(require('@material-ui/core/Snackbar'));
 var SnackbarContent = _interopDefault(require('@material-ui/core/SnackbarContent'));
+var Snackbar = _interopDefault(require('@material-ui/core/Snackbar'));
+var Button = _interopDefault(require('@material-ui/core/Button'));
 var Dialog = _interopDefault(require('@material-ui/core/Dialog'));
 var DialogActions = _interopDefault(require('@material-ui/core/DialogActions'));
 var DialogContent = _interopDefault(require('@material-ui/core/DialogContent'));
@@ -1673,7 +1673,7 @@ var styles$4 = {
         position: 'relative',
         width: '100%',
         minHeight: '250px',
-        backgroundColor: '#F0F0F0',
+        backgroundColor: '##545454',
         border: 'dashed',
         borderColor: '#C8C8C8',
         cursor: 'pointer',
@@ -1681,7 +1681,7 @@ var styles$4 = {
     },
     stripes: {
         border: 'solid',
-        backgroundImage: 'repeating-linear-gradient(-45deg, #F0F0F0, #F0F0F0 25px, #C8C8C8 25px, #C8C8C8 50px)',
+        backgroundImage: 'repeating-linear-gradient(-45deg, #545454, #F0F0F0 25px, #C8C8C8 25px, #C8C8C8 50px)',
         animation: 'progress 2s linear infinite !important',
         backgroundSize: '150% 100%'
     },
@@ -2045,7 +2045,7 @@ DropzoneArea.defaultProps = {
     acceptedFiles: ['image/*', 'video/*', 'application/*'],
     filesLimit: 3,
     maxFileSize: 3000000,
-    dropzoneText: 'Drag and drop an image file here or click',
+    dropzoneText: 'Drag and drop a csv or geojson file here or click',
     showPreviews: false, // By default previews show up under in the dialog and inside in the standalone
     showPreviewsInDropzone: true,
     showFileNamesInPreview: false,
@@ -2100,6 +2100,7 @@ DropzoneArea.propTypes = {
     onDropRejected: PropTypes.func,
     onDelete: PropTypes.func
 };
+
 var DropzoneArea$1 = styles.withStyles(styles$4)(DropzoneArea);
 
 var DropzoneDialog = function (_React$Component) {
@@ -2222,6 +2223,11 @@ var DropzoneDialog = function (_React$Component) {
                     React__default.createElement(
                         DialogContent,
                         null,
+                        React__default.createElement(
+                            DialogContentText,
+                            null,
+                            'Upload your pointset as a valid geojson FeatureCollection or as a CSV file. For more info on uploading, such as including point properties, see sidebar->help.'
+                        ),
                         React__default.createElement(DropzoneArea$1, {
                             dropzoneText: this.props.dropzoneText,
                             acceptedFiles: this.props.acceptedFiles,

@@ -5,12 +5,12 @@ import { Chip } from '@material-ui/core';
 import Fab from '@material-ui/core/Fab';
 import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
 import green from '@material-ui/core/colors/green';
 import amber from '@material-ui/core/colors/amber';
 import IconButton from '@material-ui/core/IconButton';
-import Snackbar from '@material-ui/core/Snackbar';
 import SnackbarContent from '@material-ui/core/SnackbarContent';
+import Snackbar from '@material-ui/core/Snackbar';
+import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
@@ -1666,7 +1666,7 @@ var styles$3 = {
         position: 'relative',
         width: '100%',
         minHeight: '250px',
-        backgroundColor: '#F0F0F0',
+        backgroundColor: '##545454',
         border: 'dashed',
         borderColor: '#C8C8C8',
         cursor: 'pointer',
@@ -1674,7 +1674,7 @@ var styles$3 = {
     },
     stripes: {
         border: 'solid',
-        backgroundImage: 'repeating-linear-gradient(-45deg, #F0F0F0, #F0F0F0 25px, #C8C8C8 25px, #C8C8C8 50px)',
+        backgroundImage: 'repeating-linear-gradient(-45deg, #545454, #F0F0F0 25px, #C8C8C8 25px, #C8C8C8 50px)',
         animation: 'progress 2s linear infinite !important',
         backgroundSize: '150% 100%'
     },
@@ -2038,7 +2038,7 @@ DropzoneArea.defaultProps = {
     acceptedFiles: ['image/*', 'video/*', 'application/*'],
     filesLimit: 3,
     maxFileSize: 3000000,
-    dropzoneText: 'Drag and drop an image file here or click',
+    dropzoneText: 'Drag and drop a csv or geojson file here or click',
     showPreviews: false, // By default previews show up under in the dialog and inside in the standalone
     showPreviewsInDropzone: true,
     showFileNamesInPreview: false,
@@ -2093,6 +2093,7 @@ DropzoneArea.propTypes = {
     onDropRejected: PropTypes.func,
     onDelete: PropTypes.func
 };
+
 var DropzoneArea$1 = withStyles(styles$3)(DropzoneArea);
 
 var DropzoneDialog = function (_React$Component) {
@@ -2215,6 +2216,11 @@ var DropzoneDialog = function (_React$Component) {
                     React.createElement(
                         DialogContent,
                         null,
+                        React.createElement(
+                            DialogContentText,
+                            null,
+                            'Upload your pointset as a valid geojson FeatureCollection or as a CSV file. For more info on uploading, such as including point properties, see sidebar->help.'
+                        ),
                         React.createElement(DropzoneArea$1, {
                             dropzoneText: this.props.dropzoneText,
                             acceptedFiles: this.props.acceptedFiles,
