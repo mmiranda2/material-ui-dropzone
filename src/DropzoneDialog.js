@@ -93,7 +93,7 @@ class DropzoneDialog extends React.Component {
                     <DialogTitle>{this.props.dialogTitle}</DialogTitle>
                     <DialogContent>
                         <DialogContentText>
-                            Upload your pointset as a valid geojson FeatureCollection or as a CSV file. For more info on uploading, such as including point properties, see sidebar->help.
+                            Upload your pointset as a valid GeoJSON FeatureCollection or as a CSV file. For more info on uploading, such as including point properties, see the help page on the sidebar.
                         </DialogContentText>
                         <DropzoneArea
                             dropzoneText={this.props.dropzoneText}
