@@ -1666,7 +1666,7 @@ var styles$3 = {
         position: 'relative',
         width: '100%',
         minHeight: '250px',
-        backgroundColor: '##545454',
+        backgroundColor: '#545454',
         border: 'dashed',
         borderColor: '#C8C8C8',
         cursor: 'pointer',
