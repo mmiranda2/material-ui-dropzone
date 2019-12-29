@@ -21,6 +21,7 @@ var Button = _interopDefault(require('@material-ui/core/Button'));
 var Dialog = _interopDefault(require('@material-ui/core/Dialog'));
 var DialogActions = _interopDefault(require('@material-ui/core/DialogActions'));
 var DialogContent = _interopDefault(require('@material-ui/core/DialogContent'));
+var DialogContentText = _interopDefault(require('@material-ui/core/DialogContentText'));
 var DialogTitle = _interopDefault(require('@material-ui/core/DialogTitle'));
 
 function unwrapExports (x) {
