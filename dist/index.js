@@ -2046,7 +2046,7 @@ DropzoneArea.defaultProps = {
     acceptedFiles: ['image/*', 'video/*', 'application/*'],
     filesLimit: 3,
     maxFileSize: 3000000,
-    dropzoneText: 'Drag and drop a csv or geojson file here or click',
+    dropzoneText: 'Drag and drop your file here',
     showPreviews: false, // By default previews show up under in the dialog and inside in the standalone
     showPreviewsInDropzone: true,
     showFileNamesInPreview: false,
@@ -2227,7 +2227,7 @@ var DropzoneDialog = function (_React$Component) {
                         React__default.createElement(
                             DialogContentText,
                             null,
-                            'Upload your pointset as a valid geojson FeatureCollection or as a CSV file. For more info on uploading, such as including point properties, see sidebar->help.'
+                            'Upload your pointset as a valid GeoJSON FeatureCollection or as a CSV file. For more info on uploading, such as including point properties, see the help page on the sidebar.'
                         ),
                         React__default.createElement(DropzoneArea$1, {
                             dropzoneText: this.props.dropzoneText,
