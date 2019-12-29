@@ -22,7 +22,7 @@ const styles = {
         position: 'relative',
         width: '100%',
         minHeight: '250px',
-        backgroundColor: '#F0F0F0',
+        backgroundColor: '##545454',
         border: 'dashed',
         borderColor: '#C8C8C8',
         cursor: 'pointer',
@@ -30,7 +30,7 @@ const styles = {
     },
     stripes: {
         border: 'solid',
-        backgroundImage: 'repeating-linear-gradient(-45deg, #F0F0F0, #F0F0F0 25px, #C8C8C8 25px, #C8C8C8 50px)',
+        backgroundImage: 'repeating-linear-gradient(-45deg, #545454, #F0F0F0 25px, #C8C8C8 25px, #C8C8C8 50px)',
         animation: 'progress 2s linear infinite !important',
         backgroundSize: '150% 100%',
     },
@@ -251,7 +251,7 @@ DropzoneArea.defaultProps = {
     acceptedFiles: ['image/*', 'video/*', 'application/*'],
     filesLimit: 3,
     maxFileSize: 3000000,
-    dropzoneText: 'Drag and drop an image file here or click',
+    dropzoneText: 'Drag and drop a csv or geojson file here or click',
     showPreviews: false, // By default previews show up under in the dialog and inside in the standalone
     showPreviewsInDropzone: true,
     showFileNamesInPreview: false,
